@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1.07627,0,0,1.07627,-33.4407,-44.2034)">
+        <path d="M268,101C268,68.437 241.563,42 209,42L91,42C58.437,42 32,68.437 32,101L32,219C32,251.563 58.437,278 91,278L209,278C241.563,278 268,251.563 268,219L268,101Z" style="fill:rgb(13,92,60);"/>
+    </g>
+    <g transform="matrix(1.0202,-1.03257,1.03257,1.0202,-107.093,164.83)">
+        <text x="63px" y="126px" style="font-family:'AppleSDGothicNeo-Heavy', 'Apple SD Gothic Neo';font-weight:900;font-size:76.783px;fill:white;">오예</text>
+    </g>
+</svg>

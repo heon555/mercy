@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>나의 단어사전</title>
+<link rel="shortcut icon" href="ohyeah.svg">
+</head>
+<body>
+    <div class="dictionary-container">
+        <h1 class="name">MERCY반 단어사전</h1>
+        <center>
+            <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="coolman.jpg" alt="Image 1">
+        </div>
+            <div class="mySlides fade">
+            <img src="talmobeam.jpg" alt="Image 2">
+        </div>
+        <div class="mySlides fade">
+            <img src="turtle.jpg" alt="Image 2">
+        </div>
+        <div class="mySlides fade">
+            <img src="trump.jpg" alt="Image 2">
+        </div>
+    
+        <!-- 추가 이미지 추가 가능 -->
+    </div>
+
+    </div>
+
+     <div class="word-list">
+            <div class="word">
+                <span class="term">현수하다</span> </br>
+                <span class="definition">1. 까마귀처럼 검은 색 옷을 사람을 지칭하는 말</span></br>
+                <span class="definition">2. 거북이 애호활동을 하는 것</span>
+            </div>
+            <div class="word">
+                <span class="term">지한하다</span></br>
+                <span class="definition">폭식을 하는 것</span>
+            </div>
+            <div class="word">
+                <span class="term">규진하다</span></br>
+                <span class="definition">1. 러시아로 귀화를 하는 것</span></br>
+                <span class="definition">2. 무언가가 확실하게 티 나는 것</span>
+            </div>
+            <div class="word">
+             <span class="term">예찬하다</span> </br>
+                <span class="definition">1. 광기의 행동을 보이는 것</span></br>
+                <span class="definition">2. 무언가 이상하거나 두려운 낌새를 느낌</span>
+            </div>
+
+
+</div>
+</body>
+<style>
+    @font-face {
+    font-family: 'TTTtangsbudaejjigaeB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/TTTtangsbudaejjigaeB.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LOTTERIACHAB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+    body{
+        font-family: 'TAEBAEKfont';
+        background-color: #CFB997;
+    margin: 0;
+    padding: 0;
+
+    justify-content: center;
+    align-items: center;
+    }
+    .dictionary-container {
+
+    text-align: center;
+}
+
+
+h1 {
+    color: #333;
+}
+
+.word-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.word {
+    background-color: #5b5b5b;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px;
+    margin: 30px;
+    transition: transform 0.3s;
+
+
+    width: 80%;
+
+}
+
+.term{
+    font-family: 'TTTtangsbudaejjigaeB';
+    font-size: 70px;
+
+}
+.definition{
+    font-family: 'NanumSquareNeo-Variable';
+}
+.name{
+     font-family: 'LOTTERIACHAB';
+    font-size: 100px;
+    margin-top: 20px;
+    
+}
+
+   .slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+
+}
+
+.mySlides {
+    display: none;
+    animation: fade 2s ease infinite;
+
+}
+
+
+
+img {
+    width: 100%;
+    border-radius: 40px;
+
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+</style>
+<script>
+    const wordElements = document.querySelectorAll(".word");
+
+wordElements.forEach((wordElement) => {
+    wordElement.addEventListener("click", () => {
+        wordElement.classList.toggle("expanded");
+    });
+});
+
+    let slideIndex = 0;
+
+showSlides();
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function showSlides() {
+    let i;
+    const slides = document.getElementsByClassName("mySlides");
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 2000); // 2초마다 슬라이드 전환
+}
+</script>
+</html>
