@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>MERCY반 단어사전</title>
 <link rel="shortcut icon" href="ohyeah.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body>
     <div class="dictionary-container">
@@ -36,7 +38,8 @@
             </div>
             <div class="word">
                 <span class="term">지한하다</span></br>
-                <span class="definition">폭식을 하는 것</span>
+                <span class="definition">1. 여러 명을 짝사랑 하는 행위</span></br>
+                <span class="definition">2. 지방이 많이 섞인 땀(진짜 사전 등재)</span>
             </div>
             <div class="word">
                 <span class="term">규진하다</span></br>
@@ -62,6 +65,12 @@
                 <span class="definition">2. 목을 조르다</span>
             </div>
 
+            <div class="word">
+             <span class="term">태헌하다</span> </br>
+                <span class="definition">1. 시간 개념이 없다</span></br>
+                <span class="definition">2. 게으르다</span>
+            </div>
+
 
 </div>
 </body>
@@ -81,6 +90,12 @@
 @font-face {
     font-family: 'LOTTERIACHAB';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OKGUNG';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/OKGUNG.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -134,7 +149,7 @@ h1 {
 
 }
 .name{
-     font-family: 'LOTTERIACHAB';
+    font-family: 'OKGUNG';
     font-size: 100px;
     margin-top: 20px;
     
@@ -157,7 +172,7 @@ h1 {
 
 img {
     width: 100%;
-    border-radius: 20px;
+    border-radius: 5px;
 
 }
 
@@ -180,6 +195,36 @@ img {
     right: 0;
 }
 
+@media (max-width: 600px) {
+    .dictionary-container {
+        padding: 20px;
+    }
+    .name {
+        font-size: 40px;
+    }
+    .word {
+        text-align: center;
+        width: 100%;
+        paddin: 0px;
+        margin: 20px;
+    }
+    .term {
+        font-size: 30px;
+    }
+    .definition {
+        font-size: 16px;
+    }
+    .slideshow-container {
+        max-width: 100%;
+    }
+    .mySlides {
+        animation: none;
+        display: block;
+    }
+    img {
+        border-radius: 0;
+    }
+}
 </style>
 <script>
     const wordElements = document.querySelectorAll(".word");
@@ -214,5 +259,6 @@ function showSlides() {
     slides[slideIndex - 1].style.display = "block";
     setTimeout(showSlides, 2000); // 2초마다 슬라이드 전환
 }
+
 </script>
 </html>
